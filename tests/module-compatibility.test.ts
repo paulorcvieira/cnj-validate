@@ -71,7 +71,7 @@ describe('Module Compatibility Tests', () => {
       const esmContent = fs.readFileSync(esmPath, 'utf8')
       expect(esmContent).toContain('import ')
       expect(esmContent).toContain('export ')
-      expect(esmContent).toContain('createRequire')
+      expect(esmContent).toContain("import cjsModule from './index.js'")
       expect(esmContent).toContain('export default')
     })
 
@@ -104,11 +104,14 @@ describe('Module Compatibility Tests', () => {
       const esmPath = path.join(process.cwd(), 'dist', 'index.mjs')
       const esmContent = fs.readFileSync(esmPath, 'utf8')
 
-      // Check for the wrapper pattern
-      expect(esmContent).toContain("const cjsModule = require('./index.js')")
-      expect(esmContent).toContain('export const {')
-      expect(esmContent).toContain('validateCNJ')
-      expect(esmContent).toContain('analyzeCNJ')
+      // Check for the new wrapper pattern
+      expect(esmContent).toContain("import cjsModule from './index.js'")
+      expect(esmContent).toContain(
+        'export const validateCNJ = cjsModule.validateCNJ',
+      )
+      expect(esmContent).toContain(
+        'export const analyzeCNJ = cjsModule.analyzeCNJ',
+      )
       expect(esmContent).toContain('export default cjsModule')
     })
   })
@@ -133,7 +136,7 @@ describe('Module Compatibility Tests', () => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const packageJson = require('../package.json')
 
-      expect(packageJson.version).toBe('1.0.2')
+      expect(packageJson.version).toBe('1.0.3')
     })
   })
 
@@ -163,7 +166,7 @@ describe('Module Compatibility Tests', () => {
       )
       expect(esmContent).toContain('import ')
       expect(esmContent).toContain('export ')
-      expect(esmContent).toContain('createRequire')
+      expect(esmContent).toContain("import cjsModule from './index.js'")
     })
   })
 
