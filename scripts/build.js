@@ -58,7 +58,7 @@ function compileCommonJS() {
   log.step('2️⃣', 'Compiling TypeScript to CommonJS...')
 
   try {
-    execSync(`tsc --project ${BUILD_CONFIG.tsConfig}`, {
+    execSync(`npx tsc --project ${BUILD_CONFIG.tsConfig}`, {
       stdio: 'inherit',
       encoding: 'utf8',
     })
