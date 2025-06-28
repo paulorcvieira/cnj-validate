@@ -142,25 +142,23 @@ function generateESMWrapperContent(exports) {
  * ES Modules wrapper for cnj-validate
  * 
  * This file provides ES Modules compatibility by re-exporting
- * the CommonJS module using createRequire().
+ * individual functions from the CommonJS module.
+ * Compatible with both Node.js and browser environments.
  * 
  * Generated automatically by build script.
  */
-
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
-// Import the CommonJS module
-const cjsModule = require('./index.js');
 `
 
   const namedExports =
     exports.length > 0
       ? `
-// Re-export all named exports
-export const {
-  ${exports.join(',\n  ')}
-} = cjsModule;
+// Import the default export from CommonJS module
+import cjsModule from './index.js';
+
+// Re-export all named exports individually  
+${exports
+  .map((exportName) => `export const ${exportName} = cjsModule.${exportName};`)
+  .join('\n')}
 `
       : '\n// No named exports found\n'
 
