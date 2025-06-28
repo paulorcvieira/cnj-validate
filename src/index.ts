@@ -53,12 +53,11 @@ export {
 
 export { getMaxCourtBySegment, getOriginCourt } from './core/court-analyzer'
 
-// CSV Processing - Processamento CSV
+// CSV Processing - Processamento CSV (Browser-safe)
 export {
   generateCSV,
   processCNJBatch,
   processCSV,
-  processFile,
   validateCSVFormat,
 } from './csv/processor'
 
