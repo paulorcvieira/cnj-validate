@@ -134,7 +134,7 @@ describe('Module Compatibility Tests', () => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const packageJson = require('../package.json')
 
-      expect(packageJson.version).toBe('1.0.3')
+      expect(packageJson.version).toBe('1.0.4')
     })
   })
 
