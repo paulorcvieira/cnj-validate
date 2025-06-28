@@ -1,0 +1,74 @@
+{
+  "name": "cnj-validate",
+  "version": "1.0.0",
+  "description": "Biblioteca TypeScript para validação e análise de números de processos em conformidade com o CNJ (Conselho Nacional de Justiça) do Brasil",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "cnj-process": "./scripts/process-file.js",
+    "cnj-validate": "./scripts/process-file.js"
+  },
+  "author": "CNJ Validate Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulorcvieira/cnj-validate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulorcvieira/cnj-validate/issues"
+  },
+  "homepage": "https://github.com/paulorcvieira/cnj-validate#readme",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build && npm test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "type-check": "tsc --noEmit --project tsconfig.lib.json",
+    "example": "npm run build && node scripts/process-file.js src/csv/exampleCNJfile.csv",
+    "cli": "node scripts/process-file.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "cnj",
+    "brasil",
+    "judiciary",
+    "validation",
+    "legal",
+    "court",
+    "process",
+    "typescript",
+    "csv",
+    "batch-processing",
+    "conselho-nacional-justica"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ]
+}

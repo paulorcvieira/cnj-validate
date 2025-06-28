@@ -1,0 +1,79 @@
+# Source code (apenas dist/ é incluído)
+src/
+tests/
+
+# Git e GitHub
+.git/
+.github/
+.gitignore
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Configurações de desenvolvimento
+tsconfig*.json
+jest.config.js
+.eslintrc.js
+.editorconfig
+.prettierrc*
+
+# Dependencies e locks
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build artifacts temporários
+build/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Ambiente e variáveis
+.env*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache
+.npm
+.eslintcache
+.cache/
+
+# Arquivos temporários
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+._*
+
+# Arquivos de exemplo e saída
+output/
+test_*.csv
+*_output.csv
+*_processed.csv
+
+# Arquivos de teste e desenvolvimento
+test_*.js
+*.test.js
+*.spec.js
+
+# Documentação adicional (manter apenas README.md)
+docs/
+examples/
+*.md
+!README.md
+
+# Output do npm pack
+*.tgz 
