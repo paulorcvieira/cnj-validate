@@ -45,7 +45,7 @@ npx cnj-validate@latest input.csv
 - ⚡ **Alto desempenho** - 58.000+ CNJs/segundo
 - 💾 **Zero dependências** - biblioteca leve (117kB)
 - 🛡️ **Type-safe** - TypeScript nativo
-- 🧪 **Confiável** - 366 testes automatizados
+- 🧪 **Confiável** - 387 testes automatizados
 - 🌐 **Universal** - Node.js, browsers, qualquer framework
 - 📦 **Moderno** - CommonJS + ESM exports
 
