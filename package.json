@@ -1,6 +1,6 @@
 {
   "name": "cnj-validate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Biblioteca TypeScript para validação e análise de números de processos em conformidade com o CNJ (Conselho Nacional de Justiça) do Brasil",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
