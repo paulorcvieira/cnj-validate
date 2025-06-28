@@ -1,9 +1,9 @@
 {
   "name": "cnj-validate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Biblioteca TypeScript para validação e análise de números de processos em conformidade com o CNJ (Conselho Nacional de Justiça) do Brasil",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": {
     "cnj-process": "./scripts/process-file.js",
@@ -25,6 +25,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:compatibility": "jest tests/module-compatibility.test.ts",
     "lint": "eslint src --ext .ts",
     "type-check": "tsc --noEmit --project tsconfig.lib.json",
     "example": "npm run build && node scripts/process-file.js src/csv/exampleCNJfile.csv",
@@ -61,7 +62,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.esm.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
