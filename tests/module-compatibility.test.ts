@@ -22,7 +22,6 @@ describe('Module Compatibility Tests', () => {
       expect(typeof cjsModule.validateCNJ).toBe('function')
       expect(typeof cjsModule.analyzeCNJ).toBe('function')
       expect(typeof cjsModule.isValidCNJ).toBe('function')
-      expect(typeof cjsModule.processFile).toBe('function')
     })
 
     it('should validate CNJ correctly via CommonJS', () => {
@@ -49,8 +48,7 @@ describe('Module Compatibility Tests', () => {
       expect(typeof cjsModule.decomposeCNJ).toBe('function')
       expect(typeof cjsModule.formatCNJ).toBe('function')
 
-      // CSV functions
-      expect(typeof cjsModule.processFile).toBe('function')
+      // CSV functions (browser-safe)
       expect(typeof cjsModule.processCSV).toBe('function')
       expect(typeof cjsModule.generateCSV).toBe('function')
 
