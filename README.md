@@ -334,9 +334,9 @@ Contribuições são bem-vindas!
 
 ## 📞 Support
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/prcv/cnj-validate/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/prcv/cnj-validate/discussions)
-- 📧 **Email**: [Create Issue](https://github.com/prcv/cnj-validate/issues/new)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/paulorcvieira/cnj-validate/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/paulorcvieira/cnj-validate/discussions)
+- 📧 **Email**: [Create Issue](https://github.com/paulorcvieira/cnj-validate/issues/new)
 
 ## 📄 License
 
